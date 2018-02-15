@@ -2,6 +2,8 @@
 
 Practice Chinese characters
 
+See https://www.chineseinflow.com
+
 ## Getting Started
 
 Open Main.html - use localhost to avoid cross domain errors
