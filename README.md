@@ -36,7 +36,7 @@ To embed in a webpage combine all the js into a single file and upload.
 
 ## License
 
-don't know
+MIT - see LICENSE file
 
 
 
