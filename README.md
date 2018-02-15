@@ -35,7 +35,7 @@ To embed in a webpage combine all the js into a single file and upload.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+...don't know
 
 
 
