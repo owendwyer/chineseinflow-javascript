@@ -12,6 +12,7 @@
 
 	p.setup=function(){
 		this.myContentLoader=null;
+		this.needToCheckContext=true;
 		createjs.Sound.alternateExtensions=["mp3"];
 	};
 
@@ -19,6 +20,8 @@
 		this.gVar=gVar;
 		this.retriedOnce=false;
 		this.retriedOnceAudio=false;
+		
+		if(this.needToCheckContext)this.checkContext();
 
 		createjs.Sound.removeSound('soundId');
 		oG.model.audioLoaded=false;
@@ -26,6 +29,20 @@
 		if(this.myContentLoader!==null){this.clearupContentLoader();}
 
 		this.loadImages();
+	};
+
+	//this is a fix for changes to chrome that require user gesture before audio can play
+	p.checkContext=function(){
+		this.needToCheckContext=false;
+		try {
+			if(createjs.WebAudioPlugin.context.state==="suspended"){
+				createjs.WebAudioPlugin.context.resume();
+			}
+		}catch(e){
+			// SoundJS context or web audio plugin may not exist
+			console.error("There was an error while trying to resume the SoundJS Web Audio context...");
+			console.error(e);
+		}
 	};
 
 	p.loadImages=function(){
