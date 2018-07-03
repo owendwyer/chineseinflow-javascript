@@ -4,11 +4,7 @@ opdGame.active=false;
 opdGame.Views={};
 opdGame.Modules={};
 
-if(document.readyState==='complete'){
-	opdGame.init();
-}else{
-	document.addEventListener('DOMContentLoaded',function(){opdGame.init();});
-}
+document.addEventListener('DOMContentLoaded',function(){opdGame.init();});
 
 opdGame.init=function(){
 	//sometimes the 'DOMContentLoaded' event fires twice on the same page
