@@ -1,0 +1,17 @@
+{
+  "name": "chineseinflow",
+  "workingDir":"concentration",
+  "version": "6.0",
+  "description": "learn chinese characters",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dist": "dist",
+    "test": "test"
+  },
+  "myFiles": [
+	"js/*.js",
+	"js/utils/*.js"
+  ],
+  "author": "opd"
+}
+
