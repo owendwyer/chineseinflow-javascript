@@ -1,6 +1,15 @@
 language: node_js
 node_js:
+<<<<<<< HEAD
  - "node"
 before_script:
   - npm install -g gulp-cli
 script: gulp
+=======
+  - 8
+before_script:
+  - npm install -g gulp-cli
+script: gulp
+before_install:
+  - npm i -g npm@version-number
+>>>>>>> ad91f6691a8136dc3355aca51f9c3761d1494fb3
