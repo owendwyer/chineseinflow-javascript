@@ -1,7 +1,7 @@
 {
 	"name": "chineseinflow",
 	"workingDir":"concentration",
-	"version": "6.1.0",
+	"version": "6.6.0",
 	"description": "learn chinese characters",
 	"main": "gulpfile.js",
 	"scripts": {
@@ -9,8 +9,8 @@
 		"test": "gulp test"
 	},
 	"myFiles": [
-		"js/*.js",
-		"js/utils/*.js"
+		"js/util/*.js",
+		"js/*.js"
 	],
 	"devDependencies":{
 		"jshint": "^2.11.0",
