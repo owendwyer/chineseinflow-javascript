@@ -4,8 +4,6 @@ opdGame.active=false;
 opdGame.Views={};
 opdGame.Modules={};
 
-document.addEventListener('DOMContentLoaded',function(){opdGame.init();});
-
 opdGame.init=function(){
 	//sometimes the 'DOMContentLoaded' event fires twice on the same page
 	if(!opdGame.active){
@@ -24,7 +22,7 @@ opdGame.init=function(){
 		if(createjs.BrowserDetect.isIOS)opdGame.model.touchMode=true;
 		if(createjs.BrowserDetect.isAndroid)opdGame.model.touchMode=true;
 
-		//if this is set to true, then view will only init when 
+		//if this is set to true, then view will only init when
 		//browser url matches model.siteUrl - see controller.init()
 		opdGame.model.siteLock=false;
 
