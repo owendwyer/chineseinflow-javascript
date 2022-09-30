@@ -43,9 +43,9 @@
 		this.h1Text=new createjs.Text('','bold 44px Cabin','#333');
 		opdLib.centerText(this.h1Text);
 
-		this.lArr=new opdLib.drawArrow(20,'#ff8');
+		this.lArr=new opdLib.drawArrow(20,'#ffc');
 		this.lArr.rotation=180;
-		this.rArr=new opdLib.drawArrow(20,'#ff8');
+		this.rArr=new opdLib.drawArrow(20,'#ffc');
 
 		this.addChild(this.itemsContainer,this.titleText,this.titleOver,this.h1Text,this.lArr,this.rArr);
 
@@ -61,8 +61,8 @@
 		this.back.graphics.clear();
 		this.topPane.graphics.clear();
 		if(oG.model.orientation===0){
-			this.back.graphics.setStrokeStyle(8).beginStroke('#333').beginFill('#fff').drawRoundRect(80,60,640,460,24);
-			this.topPane.graphics.setStrokeStyle(3).beginStroke('#777').beginFill('#fff').drawRoundRect(200,35,400,80,24);
+			this.back.graphics.setStrokeStyle(8).beginStroke('#333').beginFill('#fff').drawRoundRect(80,60,640,460,60);
+			this.topPane.graphics.setStrokeStyle(3).beginStroke('#777').beginFill('#fff').drawRoundRect(200,35,400,80,30);
 			opdLib.posItem(this.loadingText,320,315);
 			opdLib.posItem(this.titleText,400,81);
 			opdLib.posItem(this.titleOver,400,85);
@@ -81,8 +81,8 @@
 				}
 			}
 		}else{
-			this.back.graphics.setStrokeStyle(8).beginStroke('#333').beginFill('#fff').drawRoundRect(60,100,430,640,24);
-			this.topPane.graphics.setStrokeStyle(3).beginStroke('#777').beginFill('#fff').drawRoundRect(125,60,300,80,16);
+			this.back.graphics.setStrokeStyle(8).beginStroke('#333').beginFill('#fff').drawRoundRect(60,100,430,640,60);
+			this.topPane.graphics.setStrokeStyle(3).beginStroke('#777').beginFill('#fff').drawRoundRect(125,60,300,80,30);
 			opdLib.posItem(this.loadingText,195,340);
 			opdLib.posItem(this.titleText,275,106);
 			opdLib.posItem(this.titleOver,275,110);
@@ -259,7 +259,7 @@
 		this.mouseChildren=false;
 		var back=new createjs.Shape();
 		back.graphics.setStrokeStyle(2);
-		back.graphics.beginStroke('#666').beginFill('#ccccff').drawRoundRect(0,0,100,100,8);
+		back.graphics.beginStroke('#666').beginFill('#ccccff').drawRoundRect(0,0,100,100,16);
 		back.alpha=0.5;
 		this.addChild(back);
 
@@ -279,7 +279,7 @@
 	};
 
 	p.setColor=function(gCol){
-		this.front.graphics.beginStroke('#555').beginFill(gCol).drawRoundRect(0,0,100,100,8);
+		this.front.graphics.beginStroke('#aaa').beginFill(gCol).drawRoundRect(0,0,100,100,16);
 	};
 
 	p.setInd=function(tar){

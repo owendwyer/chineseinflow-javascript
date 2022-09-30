@@ -49,12 +49,12 @@
 
 	p.setupDisplay=function(){
 		if(oG.model.orientation===0){
-			opdLib.posItem(this.againBut,400,484);
-			opdLib.posItem(this.backBut,400,522);
+			opdLib.posItem(this.againBut,315,500);
+			opdLib.posItem(this.backBut,525,500);
 			this.myScoresTable.y=10;
 		}else{
-			opdLib.posItem(this.againBut,210,740);
-			opdLib.posItem(this.backBut,340,740);
+			opdLib.posItem(this.againBut,170,750);
+			opdLib.posItem(this.backBut,380,750);
 			this.myScoresTable.y=20;
 		}
 	};

@@ -36,7 +36,7 @@
 
 		this.rArr.rotation=180;
 
-		this.addChild(this.pinText,this.engText,this.lArr,this.rArr,this.againBut,this.backBut,this.audioBut);
+		this.addChild(this.pinText,this.engText,this.lArr,this.rArr,this.backBut,this.audioBut);
 
 		this.setupDisplay();
 	};
@@ -55,7 +55,7 @@
 			opdLib.posItem(this.lArr,600,170);
 			opdLib.posItem(this.rArr,200,170);
 			opdLib.posItem(this.againBut,400,470);
-			opdLib.posItem(this.backBut,400,510);
+			opdLib.posItem(this.backBut,400,500);
 			opdLib.posItem(this.audioBut,367,235);
 
 			if(this.cText!=null)opdLib.posItem(this.cText,400,170);

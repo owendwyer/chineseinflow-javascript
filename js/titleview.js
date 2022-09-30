@@ -33,11 +33,11 @@
 
 	p.setupDisplay=function(){
 		if(oG.model.orientation===0){
-			opdLib.posItem(this.title,250,205);
-			opdLib.posItem(this.charBut,400,350);
-			opdLib.posItem(this.englishBut,400,390);
-			opdLib.posItem(this.optionsBut,400,430);
-			opdLib.posItem(this.reviewBut,400,470);
+			opdLib.posItem(this.title,250,140);
+			opdLib.posItem(this.charBut,400,300);
+			opdLib.posItem(this.englishBut,400,366);
+			opdLib.posItem(this.optionsBut,400,432);
+			opdLib.posItem(this.reviewBut,400,498);
 
 			this.charBut.scaleX=this.charBut.scaleY=1;
 			this.englishBut.scaleX=this.englishBut.scaleY=1;
@@ -45,10 +45,10 @@
 			this.reviewBut.scaleX=this.reviewBut.scaleY=1;
 		}else{
 			opdLib.posItem(this.title,130,255);
-			opdLib.posItem(this.charBut,280,420);
-			opdLib.posItem(this.englishBut,280,475);
-			opdLib.posItem(this.optionsBut,280,530);
-			opdLib.posItem(this.reviewBut,280,585);
+			opdLib.posItem(this.charBut,280,430);
+			opdLib.posItem(this.englishBut,280,523);
+			opdLib.posItem(this.optionsBut,280,616);
+			opdLib.posItem(this.reviewBut,280,709);
 
 			this.charBut.scaleX=this.charBut.scaleY=1.4;
 			this.englishBut.scaleX=this.englishBut.scaleY=1.4;
@@ -110,20 +110,20 @@
 	}
 	var p=createjs.extend(Button,createjs.Container);
 
-	var BUT_WID=126;
-	var BUT_HEI=36;
+	var BUT_WID=200;
+	var BUT_HEI=64;
 
 	p.setup=function(){
 		var back=new createjs.Shape();
-		back.graphics.beginFill('gold').drawRoundRect(-BUT_WID/2,-BUT_HEI/2,BUT_WID,BUT_HEI,8);
+		back.graphics.beginFill('#fc0').drawRoundRect(-BUT_WID/2,-BUT_HEI/2,BUT_WID,BUT_HEI,16);
 		this.addChild(back);
 		this.front=new createjs.Shape();
-		this.front.graphics.beginFill('#222').drawRoundRect(-BUT_WID/2,-BUT_HEI/2,BUT_WID,BUT_HEI,8);
+		this.front.graphics.beginFill('#222').drawRoundRect(-BUT_WID/2,-BUT_HEI/2,BUT_WID,BUT_HEI,16);
 		this.addChild(this.front);
 
 		var txt=new createjs.Sprite(oG.model.mainSprite);
 		txt.gotoAndStop(this.sprSrc);
-		opdLib.dispItem(txt,this,-BUT_WID/2,-BUT_HEI/2);
+		opdLib.dispItem(txt,this,-63,-18);
 	};
 
 	p.clicker=function(){

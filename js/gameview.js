@@ -47,7 +47,7 @@
 	p.setupDisplay=function(){
 		if(oG.model.orientation===0){
 			opdLib.posItem(this.targetSet,400,80);
-			opdLib.posItem(this.countdownTimer,149,154);
+			opdLib.posItem(this.countdownTimer,400,176);
 			opdLib.posItem(this.backBut,5,5);
 			opdLib.posItem(this.settingsBut,58,5);
 			opdLib.posItem(this.audioBut,580,45);
@@ -57,7 +57,7 @@
 			opdLib.posItem(this.suddenDeathDown,640,35);
 		}else{
 			opdLib.posItem(this.targetSet,275,100);
-			opdLib.posItem(this.countdownTimer,21,174);
+			opdLib.posItem(this.countdownTimer,275,198);
 			opdLib.posItem(this.backBut,5,5);
 			opdLib.posItem(this.settingsBut,5,58);
 			opdLib.posItem(this.audioBut,450,65);

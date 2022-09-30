@@ -10,9 +10,9 @@
 	};
 	var p=createjs.extend(OptionsSet,createjs.Container);
 	var xArrL=[150,400,650,275,525,150,400,650];
-	var yArrL=[255,255,255,365,365,475,475,475];
+	var yArrL=[265,265,265,375,375,485,485,485];
 	var xArrP=[150,400,275,150,400,275,150,400];
-	var yArrP=[275,275,385,495,495,605,715,715];
+	var yArrP=[285,285,395,505,505,615,725,725];
 
 	//0 - char
 	//1 - eng
@@ -160,14 +160,21 @@
 	};
 	var p=createjs.extend(OptionBit,createjs.Container);
 
+	var BIT_WID=240;
+	var BIT_HEI=100;
+
 	p.setup=function(){
 		this.mouseChildren=false;
-		var back=new createjs.Sprite(oG.model.mainSprite);
-		this.front=new createjs.Sprite(oG.model.mainSprite);
-		back.gotoAndStop('itemBack');
-		this.front.gotoAndStop('itemFront');
-		opdLib.dispItem(back,this,-125,-55);
-		opdLib.dispItem(this.front,this,-125,-55);
+		// var back=new createjs.Sprite(oG.model.mainSprite);
+		var back=new createjs.Shape();
+		back.graphics.beginStroke('#ffffff').beginFill('#fc0').drawRoundRect(-BIT_WID/2,-BIT_HEI/2,BIT_WID,BIT_HEI,20);
+		this.front=new createjs.Shape();
+		this.front.graphics.beginStroke('#ffffff').beginFill('#CCCCFF').drawRoundRect(-BIT_WID/2,-BIT_HEI/2,BIT_WID,BIT_HEI,20);
+		// this.front=new createjs.Sprite(oG.model.mainSprite);
+		// back.gotoAndStop('itemBack');
+		// this.front.gotoAndStop('itemFront');
+		opdLib.dispItem(back,this,0,0);
+		opdLib.dispItem(this.front,this,0,0);
 
 		this.pText=new createjs.Text('pinyin','bold 24px Ubuntu','#666');
 		this.eText=new createjs.Text('english','bold 24px Cabin','#fff');

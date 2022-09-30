@@ -22,10 +22,18 @@
 	var pinY=[9,9,9,34,9,18,-2,9];
 	var pinSize=[0,0,32,24,0,24,32,0];
 
+	var BACK_WID=334;
+	var BACK_HEI=120;
+
 	p.setup=function(){
-		var back=new createjs.Sprite(oG.model.mainSprite);
-		back.gotoAndStop('tarBack');
-		opdLib.dispItem(back,this,-180,-70);
+		// var back=new createjs.Sprite(oG.model.mainSprite);
+		// back.gotoAndStop('tarBack');
+
+		var back=new createjs.Shape();
+		back.graphics.setStrokeStyle(4);
+		back.graphics.beginStroke('#666666').beginFill('#F9F9F9').drawRoundRect(-BACK_WID/2,-BACK_HEI/2,BACK_WID,BACK_HEI,36);
+
+		opdLib.dispItem(back,this,-0,-0);
 		this.pText=new createjs.Text('yán jiū shēng','bold 32px Ubuntu','#444');
 		this.eText=new createjs.Text('measure word','bold 32px Cabin','#ccc');
 		opdLib.centerText(this.pText);

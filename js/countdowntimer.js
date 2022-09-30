@@ -8,17 +8,28 @@
 	};
 	var p=createjs.extend(CountdownTimer,createjs.Container);
 
+	var BACK_WID=510;
+	var BACK_HEI=50;
+	var MASK_WID=516;
+	var MASK_HEI=56;
+
 	p.setup=function(){
 		this.countdownVar=0;
 		this.countdownAddVar=0;
 
-		var countdownBack=new createjs.Sprite(oG.model.mainSprite);
-		countdownBack.gotoAndStop('countdownBack');
-		var countdownFront=new createjs.Sprite(oG.model.mainSprite);
-		countdownFront.gotoAndStop('countdownFront');
-
+		// var countdownBack=new createjs.Sprite(oG.model.mainSprite);
+		// countdownBack.gotoAndStop('countdownBack');
+		// var countdownFront=new createjs.Sprite(oG.model.mainSprite);
+		// countdownFront.gotoAndStop('countdownFront');
+		var countdownBack=new createjs.Shape();
+		countdownBack.graphics.setStrokeStyle(2);
+		countdownBack.graphics.beginStroke('#666666').beginFill('#cccccc').drawRoundRect(-BACK_WID/2,-BACK_HEI/2,BACK_WID,BACK_HEI,20);
+		var countdownFront=new createjs.Shape();
+		countdownFront.graphics.setStrokeStyle(2);
+		countdownFront.graphics.beginStroke('#666666').beginFill('#013D76').drawRoundRect(-BACK_WID/2,-BACK_HEI/2,BACK_WID,BACK_HEI,20);
+		
 		this.myMask=new createjs.Shape();
-		this.myMask.graphics.beginFill('#ccc').drawRect(0,-10,550,40);
+		this.myMask.graphics.beginFill('#ccc').drawRect(-MASK_WID/2,-MASK_HEI/2,MASK_WID,MASK_HEI);
 
 		opdLib.dispItem(countdownBack,this,0,0);
 		opdLib.dispItem(countdownFront,this,0,0);
@@ -51,8 +62,12 @@
 				oG.view.gameView.timeout();
 			}
 			var bWidth=Math.round(this.countdownVar/10);
+			// console.log(bWidth)
 			if(bWidth>4){
-				this.myMask.x=-550+bWidth;
+				this.myMask.x=-MASK_WID+bWidth;
+			}else{
+				bWidth=0;
+				this.myMask.x=-MASK_WID;
 			}
 		}
 	};
