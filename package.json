@@ -1,7 +1,7 @@
 {
 	"name": "chineseinflow",
-	"workingDir":"concentration",
-	"version": "6.6.0",
+	"workingDir": "concentration",
+	"version": "7.0.0",
 	"description": "learn chinese characters",
 	"main": "gulpfile.js",
 	"scripts": {
@@ -12,13 +12,13 @@
 		"js/util/*.js",
 		"js/*.js"
 	],
-	"devDependencies":{
-		"jshint": "^2.11.0",
-		"gulp-rename": "^2.0.0",
-		"gulp-uglify": "^3.0.2",
-		"gulp-tap": "^2.0.0",
-		"gulp-jshint": "^2.1.0",
+	"devDependencies": {
 		"gulp-concat": "^2.6.1",
+		"gulp-jshint": "^2.1.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-tap": "^2.0.0",
+		"gulp-uglify": "^3.0.2",
+		"jshint": "^2.11.0",
 		"yargs": "^15.3.0"
 	},
 	"author": "opd"
